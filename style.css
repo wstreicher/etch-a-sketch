@@ -1,10 +1,10 @@
 .cell {
     border: 1px solid;
-    min-width: 50px;
-    min-height: 50px;
     background-color: rgba(0, 0, 0, 0);
 }
 
 .container {
     display: grid;
+    width: 500px;
+    height: 500px;
 }
