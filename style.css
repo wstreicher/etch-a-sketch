@@ -1,0 +1,9 @@
+.cell {
+    border: 1px solid;
+    min-width: 50px;
+    min-height: 50px;
+}
+
+.container {
+    display: grid;
+}
