@@ -29,11 +29,11 @@ function generateGrid(num) {
 // Prompts the user for input, which it uses to generate a new grid.
 function generateNewGrid() {
     let input = parseInt(window.prompt("Enter a number between 1-100:"));
-    if ((input == null) || (input < 1) || (input > 100) ){
-        return;
+    // Defaults to 16 for invalid inputs.
+    if ((input < 1) || (input > 100) || (isNaN(input))){
+        input = 16;
     };
     generateGrid(input);
-    return;
 };
 
 // Changes the color of a cell when it is moused over.
