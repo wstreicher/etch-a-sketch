@@ -1,8 +1,8 @@
 let newGridButton = document.querySelector('.new-grid');
 newGridButton.addEventListener('click', generateNewGrid);
-let cells = document.querySelectorAll('.cell');
 
 generateGrid(16);
+
 
 
 // Removes the current grid, if possible, and creates a new grid with the specified number of rows and column.
@@ -17,10 +17,13 @@ function generateGrid(num) {
        let newCell = document.createElement('div');
        newCell.classList.add('cell');
        container.appendChild(newCell);
+       newCell.addEventListener('mouseover', changeColor);
     };
 
     container.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
     container.style.gridTemplateRows = `repeat(${num}, 1fr)`;
+
+
 };
 
 // Prompts the user for input, which it uses to generate a new grid.
@@ -32,4 +35,9 @@ function generateNewGrid() {
     generateGrid(input);
     return;
 };
+
+// Changes the color of a cell when it is moused over.
+function changeColor() {
+    this.style.backgroundColor = "black";
+}
 
